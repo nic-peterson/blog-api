@@ -1,0 +1,85 @@
+:root {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #10233f;
+  background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 50%);
+}
+
+body {
+  margin: 0;
+}
+
+.shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+.app-header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-list,
+.comment-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.post-list li,
+.comment-list li,
+.comment-form {
+  border: 1px solid #c8d4e8;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.comment-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.comment-form label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+button {
+  width: fit-content;
+  background: #11396b;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #b00020;
+}
+
+.muted {
+  color: #4c5b72;
+  font-size: 0.9rem;
+}
+
+.post-content {
+  white-space: pre-wrap;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@blog/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "dev:test": "cross-env NODE_ENV=test PORT=4000 CORS_ORIGINS=http://127.0.0.1:4173,http://127.0.0.1:4174 JWT_SECRET=test-secret JWT_EXPIRES_IN=2h node src/server.js",
+    "start": "node src/server.js",
+    "build": "echo \"No build step for API\"",
+    "lint": "eslint src tests",
+    "typecheck": "tsc --noEmit -p ../../tsconfig.json",
+    "test": "vitest run",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate:deploy": "prisma migrate deploy",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "prisma:seed": "prisma db seed",
+    "test:coverage": "vitest run --coverage"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "prisma": "^6.4.1",
+    "supertest": "^7.0.0",
+    "vitest": "^3.0.8"
+  }
+}

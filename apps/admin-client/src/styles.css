@@ -1,0 +1,86 @@
+:root {
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: #142037;
+  background: radial-gradient(circle at top, #f2fff6 0%, #f8fbff 45%, #ffffff 100%);
+}
+
+body {
+  margin: 0;
+}
+
+.shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+.panel {
+  border: 1px solid #bfcedc;
+  border-radius: 8px;
+  background: white;
+  padding: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.post-list,
+.comment-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.comment-list li {
+  border: 1px solid #d8e2ee;
+  border-radius: 6px;
+  padding: 0.65rem;
+}
+
+button,
+.button-link {
+  font: inherit;
+  background: #124e3a;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+.error-message {
+  color: #b00020;
+}
