@@ -80,6 +80,23 @@ npm run test:e2e
 
 `npm run test:e2e` expects a reachable Postgres instance at `TEST_DATABASE_URL` (or defaults to `postgresql://postgres:postgres@127.0.0.1:5432/blog_api_test?schema=public`).
 
+## Local workflow
+
+Suggested command order during development:
+
+```bash
+npm run lint
+npm run typecheck
+npm run test:unit
+npm run test:coverage
+```
+
+Before opening a PR that touches E2E behavior, run:
+
+```bash
+npm run test:e2e
+```
+
 ## Railway deployment (API)
 
 1. Create Railway service from this repo.
